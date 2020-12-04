@@ -18,5 +18,5 @@ INCLUDE = -I$(PREFIX)/include
 
 LIBS = -L$(PREFIX)/lib -lgfortran
 
-HDF5_LIBS = -lhdf5 -lz -Wl,-rpath,$(PREFIX)/lib
-LAPACK = -llapack -Wl,-rpath,$(PREFIX)/lib
+HDF5_LIBS = -L$(PREFIX)/lib -lhdf5 -lz -Wl,-rpath,$(PREFIX)/lib
+LAPACK = -L$(PREFIX)/lib -llapack -Wl,-rpath,$(PREFIX)/lib
