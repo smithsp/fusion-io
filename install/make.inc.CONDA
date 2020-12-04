@@ -1,11 +1,11 @@
-CC = mpicc
-CXX = mpicxx
+CC = $(PREFIX)/bin/mpicc
+CXX := $(PREFIX)/bin/mpicxx
 CFLAGS = -Wall -fPIC
 
-F90 = mpif90
+F90 := $(PREFIX)/bin/mpif90
 F90FLAGS = -Wall -fdefault-real-8 -fimplicit-none -fPIC
 
-PYTHON = $(PREFIX)/bin/python
+PYTHON := $(PREFIX)/bin/python
 
 ARCH = ar cr
 
@@ -14,9 +14,9 @@ LD = $(CXX)
 LDFLAGS = -fPIC
 LDOPTS = 
 
-INCLUDE = -I$(PREFIX)/include
+INCLUDE := -I$(PREFIX)/include
 
-LIBS = -L$(PREFIX)/lib -lgfortran
+LIBS := -L$(PREFIX)/lib -lgfortran
 
-HDF5_LIBS = -L$(PREFIX)/lib -lhdf5 -lz
-LAPACK = -L$(PREFIX)/lib -llapack
+HDF5_LIBS := -L$(PREFIX)/lib -lhdf5 -lz
+LAPACK := -L$(PREFIX)/lib -llapack
