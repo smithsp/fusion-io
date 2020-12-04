@@ -94,7 +94,7 @@ conda_install : fio_setup.py python_interface.cpp
 	cp $(SRCDIR)/fpy.py $(SRCDIR)/_$(FIO_ARCH)
 	ARCHFLAGS='$(LIBS)' CXX='$(CXX)' CC='$(CXX)' \
 	CFLAGS='$(CFLAGS) $(INCLUDE) $(LIBS)' \
-	$(PYTHON) $< install $(PYFLAGS) --user
+	$(PYTHON) $< install $(PYFLAGS)
 
 include $(FIO_ROOT)/install/common_footer.mk
 
